@@ -44,15 +44,28 @@ function playRound(humanChoice, computerChoice) {
     console.log("You win! paper beats rock");
     humanScore++;
   }
-
-
-
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
 
-console.log(computerScore);
-console.log(humanScore);
+
+
+function playGame() {
+
+  for (let i = 0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+  }
+  console.log(computerScore);
+  console.log(humanScore);
+  if (computerScore > humanScore) {
+    console.log("Computer Wins");
+  } else if (humanScore > computerScore) {
+    console.log("you Wins");
+  } else {
+    console.log("draw");
+  }
+}
+playGame()
+
