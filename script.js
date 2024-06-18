@@ -5,3 +5,9 @@ function getComputerChoice() {
   console.log(choises[rnd]);
 }
 getComputerChoice();
+
+function getHumanChoice() {
+  const hChoise = prompt("rock, paper, scissors");
+  console.log(hChoise);
+}
+getHumanChoice();
